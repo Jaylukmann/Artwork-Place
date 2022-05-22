@@ -1,5 +1,5 @@
 # Celo Marketplace Dapp
-![](https://github.com/dacadeorg/celo-development-101/blob/main/content/gifs/celo_trailer_02.gif)
+![]()
 
 ## Description
 This is a very simple artworkplace dapp where users can:

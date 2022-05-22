@@ -1,4 +1,4 @@
-# Celo Marketplace Dapp
+# Celo Artwork-Place Dapp
 ![]()
 
 ## Description

@@ -10,8 +10,7 @@ This is a very simple artworkplace dapp where users can:
  
 
 ## Live Demo
-[Artwork-Place]([
-Test](https://jaylukmann.github.io/Artwork-Place/src/index.html))
+[Artwork-Place]([Artwork-Place](https://jaylukmann.github.io/Artwork-Place/src/index.html))
 
 ## Usage
 
@@ -21,8 +20,7 @@ Test](https://jaylukmann.github.io/Artwork-Place/src/index.html))
 3. Go to [https://celo.org/developers/faucet](https://celo.org/developers/faucet) and get tokens for the alfajores testnet.
 4. Switch to the alfajores testnet in the CeloExtensionWallet.
 
-### [
-Test](https://jaylukmann.github.io/Artwork-Place/src/index.html)
+### [Artwork-Place](https://jaylukmann.github.io/Artwork-Place/src/index.html)
 1. Create an artwork and check if you can buy your own artwork. It should fail.
 2. Create a second account in your extension wallet and send them cUSD tokens.
 3. Buy artwork with secondary account.

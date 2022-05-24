@@ -1,8 +1,8 @@
-# Celo Artwork-Place Dapp
+# Artwork-Place Dapp
 ![]()
 
 ## Description
-This is a very simple artworkplace dapp where users can:
+This is a very simple artworkplace dapp built on the celo network where users can:
 * Host artworks but not buy their own artwork.
 * See artworks hosted by you and others on the Celo Blockchain.
 * Purchase artworks with cUSD and pay the owner

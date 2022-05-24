@@ -25,7 +25,7 @@ This is a very simple artworkplace dapp where users can:
 1. Create an artwork and check if you can buy your own artwork. It should fail.
 2. Create a second account in your extension wallet and send them cUSD tokens.
 3. Buy artwork with secondary account.
-4. Check if balance of first account increased by 95% as the contract owner receives 5% commission
+4. Check if balance of first account increased by 95% as the contract owner receives 5% commission.
 5.Check if the artwork owner can edit and delete the his artwork. He should.
 
 

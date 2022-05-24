@@ -1,9 +1,9 @@
 # Artwork-Place Dapp
-![](https://github.com/jaylukmann/artwork-place/images/1.PNG )
-![](https://github.com/jaylukmann/artwork-place/images/2.PNG )
-![](https://github.com/jaylukmann/artwork-place/images/3.PNG )
-![](https://github.com/jaylukmann/artwork-place/images/6.PNG )
-![](https://github.com/jaylukmann/artwork-place/images/7.PNG )
+![](https://github.io/jaylukmann/Artwork-Place/images/1.PNG )
+![](https://github.io/jaylukmann/Artwork-Place/images/2.PNG )
+![](https://github.io/jaylukmann/Artwork-Place/images/3.PNG )
+![](https://github.io/jaylukmann/Artwork-Place/images/6.PNG )
+![](https://github.io/jaylukmann/Artwork-Place/images/7.PNG )
 
 
 ## Description
@@ -31,7 +31,7 @@ This is a very simple artworkplace dapp built on the celo network where users ca
 2. Create a second account in your extension wallet and send them cUSD tokens.
 3. Buy artwork with secondary account.
 4. Check if the balance of the first account increased by 95% while that of the buyer      reduced by 100% of the price of the artwork as the contract owner receives 5% commission.
-5.Check if the artwork owner can edit and delete his artwork. He should be able to.
+5. Check if the artwork owner can edit and delete his artwork. He should be able to.
 6. Switch accounts to see how the edit and remove buttons toggle between artwork owner and non-artwork owner.
 
 

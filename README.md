@@ -1,5 +1,5 @@
-# Celo Marketplace Dapp
-![]()
+# Artwork-Place Dapp
+![](/images/1.PNG /images/2.PNG /images/3.PNG /images/6.PNG /images/7.PNG)
 
 ## Description
 This is a very simple artworkplace dapp where users can:
@@ -7,10 +7,11 @@ This is a very simple artworkplace dapp where users can:
 * See artworks hosted by you and others on the Celo Blockchain.
 * Purchase artworks with cUSD and pay the owner
 * Add your own artworks to the dapp as well as edit and delete your artwork.
+* Are charged a 5% commission on every purchase of their artwork
  
 
 ## Live Demo
-[Artwork-Place](https://dacadeorg.github.io/celo-marketplace-dapp/)
+[Artwork-Place](https://jaylukmann.github.io/Artwork-Place/src/index.html)
 
 ## Usage
 

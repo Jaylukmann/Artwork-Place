@@ -1,5 +1,10 @@
 # Artwork-Place Dapp
-![](/images/1.PNG /images/2.PNG /images/3.PNG /images/6.PNG /images/7.PNG)
+![](https://github.com/jaylukmann/artwork-place/images/1.PNG )
+![](https://github.com/jaylukmann/artwork-place/images/2.PNG )
+![](https://github.com/jaylukmann/artwork-place/images/3.PNG )
+![](https://github.com/jaylukmann/artwork-place/images/6.PNG )
+![](https://github.com/jaylukmann/artwork-place/images/7.PNG )
+
 
 ## Description
 This is a very simple artworkplace dapp built on the celo network where users can:

@@ -3,6 +3,7 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
+//Creating ERC20 interface.
 interface IERC20Token {
   function transfer(address, uint256) external returns (bool);
   function approve(address, uint256) external returns (bool);
@@ -11,15 +12,18 @@ interface IERC20Token {
   function balanceOf(address) external view returns (uint256);
   function allowance(address, address) external view returns (uint256);
 
+  //events for the frontend
   event Transfer(address indexed from, address indexed to, uint256 value);
   event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
 contract ArtworkPlace {
+    //State variables:smart contract owner,the index of artwork $ the cUsd token address.
     address internal contractOwner;
     uint internal ArtworkLength = 0;
     address internal cUsdTokenAddress =  0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
 
+   // Modellig each artwork.
     struct Artwork {
         address payable owner;
         string name;
@@ -29,14 +33,15 @@ contract ArtworkPlace {
         uint price;
         uint sold;
     }
-
+     //Creating a key-value pair data type for each artwork.Accessing each through its index.
     mapping (uint => Artwork) internal artworks;
     
-    	//CONSTRUCTOR
+    	//CONSTRUCTOR:initializing the contract deployer as the owner.
 	constructor () payable  {
 		contractOwner = msg.sender;
 	}
     
+    //A setter function for creating each artwork.
     function createArtWork(
         string memory _name,
         string memory _image,
@@ -57,6 +62,7 @@ contract ArtworkPlace {
         ArtworkLength++;
     }
 
+     //A getter function for getter each artwork with its index.
     function viewArtWork(uint _index) public view returns (
         address payable,
         string memory, 
@@ -77,6 +83,7 @@ contract ArtworkPlace {
         );
     }
  
+    //Buying an artwork at 95% of cUsd to the owner and 5% cUsd to the contract owner.
     function buyArtWork(uint _index) public payable  {
          uint adjustedPrice = (artworks[_index].price * 95)/100;
          uint commissionPrice = (artworks[_index].price * 5)/100;
@@ -97,15 +104,16 @@ contract ArtworkPlace {
         );
         artworks[_index].sold++;
     }
-
+    
+    //A getter for getting the balance of the smart contract.
     function getContractBalance() public view returns (uint){
          return payable(address(this)).balance;
   }
-    
+    //A getter for getting the total amount of artwork on the platform.
     function getArtWorkLength() public view returns (uint) {
         return (ArtworkLength);
     }
-
+    //A function for changing the parameters of each artwork by the artwork owner alone.
     function editArtwork(
         uint _index,
         string memory _name,
@@ -122,6 +130,7 @@ contract ArtworkPlace {
         artworks[_index].price = _price;
     }
 
+    //A function for deleting an artwork by the artwork owner alone.
     function removeArtwork( uint _index) public {
         require(artworks[_index].owner == msg.sender,"Access denied!,only artwork owner can remove artwork");
         delete artworks[_index];

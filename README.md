@@ -16,7 +16,7 @@ This is a very simple artworkplace dapp built on the celo network where users ca
  
 
 ## Live Demo
-[Artwork-Place](https://jaylukmann.github.io/Artwork-Place/src/index.html)
+[Artwork-Place](https://jaylukmann.github.io/Artwork-Place/doc/index.html)
 
 ## Usage
 

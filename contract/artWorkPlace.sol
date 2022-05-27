@@ -62,7 +62,7 @@ contract ArtworkPlace {
         ArtworkLength++;
     }
 
-     //A getter function for getter each artwork with its index.
+     //A getter function for getting each artwork with its index.
     function viewArtWork(uint _index) public view returns (
         address payable,
         string memory, 
@@ -85,17 +85,22 @@ contract ArtworkPlace {
  
     //Buying an artwork at 95% of cUsd to the owner and 5% cUsd to the contract owner.
     function buyArtWork(uint _index) public payable  {
+        //Adjusting and sharing fund between arwork owner and smart contract owner
          uint adjustedPrice = (artworks[_index].price * 95)/100;
          uint commissionPrice = (artworks[_index].price * 5)/100;
 
+        ///Sorry,you cannot buy your own artwork!
         require(msg.sender != artworks[_index].owner,"You cannot buy your own artwork");
+
+        ///Transfer to contract owner failed
         require(IERC20Token(cUsdTokenAddress).transferFrom(
              msg.sender,
              contractOwner,
              commissionPrice
         ), "Transfer to contract owner failed");
-        require(
-          IERC20Token(cUsdTokenAddress).transferFrom(
+
+         ///Transfer to artwork owner failed
+        require(IERC20Token(cUsdTokenAddress).transferFrom(
             msg.sender,
             artworks[_index].owner,
             adjustedPrice
@@ -109,11 +114,12 @@ contract ArtworkPlace {
     function getContractBalance() public view returns (uint){
          return payable(address(this)).balance;
   }
-    //A getter for getting the total amount of artwork on the platform.
+    //A getter for getting the total amount of artworks on the platform.
     function getArtWorkLength() public view returns (uint) {
         return (ArtworkLength);
     }
     //A function for changing the parameters of each artwork by the artwork owner alone.
+    ///Access denied!,only artwork owner can edit artwork.
     function editArtwork(
         uint _index,
         string memory _name,
@@ -131,6 +137,7 @@ contract ArtworkPlace {
     }
 
     //A function for deleting an artwork by the artwork owner alone.
+     ///Access denied!,only artwork owner can remove artwork.
     function removeArtwork( uint _index) public {
         require(artworks[_index].owner == msg.sender,"Access denied!,only artwork owner can remove artwork");
         delete artworks[_index];
